@@ -1,0 +1,16 @@
+@use "./variables" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&family=Outfit:wght@300&display=swap");
+$primary-font: "League Gothic", sans-serif;
+$secondary-font: "Outfit", sans-serif;
+
+// here we use rem for font-size
+// rem is relative to the :root element in the dom (html tag)
+
+// adding display and width prevents margin collapse on these semantic text elements
+// p {
+//   margin: 0.5rem 0;
+//   display: inline-block;
+//   width: 100%;
+// }

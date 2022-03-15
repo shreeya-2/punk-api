@@ -1,7 +1,14 @@
 @use "./styles/reset";
 @use "./styles/typography";
 @use "./styles/variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
 
 .app {
-  height: 100vh;
+  &__banner {
+    width: 100%;
+  }
+
+  &__content {
+    padding-top: 30rem;
+  }
 }

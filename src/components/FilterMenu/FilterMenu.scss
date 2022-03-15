@@ -1,0 +1,14 @@
+@use "../../styles/variables" as *;
+@use "../../styles/typography" as *;
+
+.filter-menu {
+  &__icon {
+    height: 2.3rem;
+    margin-left: 1rem;
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+    font-family: $secondary-font;
+  }
+}
