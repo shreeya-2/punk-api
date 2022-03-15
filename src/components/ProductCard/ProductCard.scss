@@ -1,0 +1,44 @@
+@use "../../styles/variables" as *;
+@use "../../styles/typography" as *;
+
+.product-card {
+  background-color: $background-color;
+  padding: 1rem;
+  height: 22rem;
+  width: 12.5rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  border: solid 0.1rem #dedede;
+
+  &__image {
+    height: 45%;
+    padding-bottom: 0.7rem;
+  }
+
+  &__heading {
+    font-family: $primary-font;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__subheading {
+    font-family: $secondary-font;
+    font-size: 1.2rem;
+    text-align: center;
+    padding-bottom: 0.7rem;
+  }
+
+  &__label {
+    font-family: $secondary-font;
+    font-size: 0.7rem;
+    border: solid 2px $accent-color;
+    padding: 0.5rem;
+    border-radius: 33px;
+    text-align: center;
+  }
+}

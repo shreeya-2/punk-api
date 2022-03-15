@@ -1,10 +1,22 @@
 import React from "react";
+import ProductCard from "../ProductCard/ProductCard";
 import "./CardContainer.scss";
 
-const CardContainer = () => {
+const CardContainer = ({ cards }) => {
+  console.log({ cards });
   return (
     <div className="card-container">
-      <p> render cards!</p>
+      {cards.map((product) => {
+        // console.log({product.name})
+        return (
+          <ProductCard
+            image={product.image_url}
+            name={product.name}
+            tagline={product.tagline}
+            label={product.abv}
+          />
+        );
+      })}
     </div>
   );
 };

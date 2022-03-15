@@ -11,15 +11,19 @@
   &__icon {
     height: 1.5rem;
     padding-left: 0.3rem;
+    padding-right: 0.5rem;
   }
 
   &__input {
     border-style: none;
+    outline: none;
     background-color: transparent;
     width: 7rem;
     color: $text-color;
     font-family: $secondary-font;
     font-weight: 600;
     font-size: 1rem;
+    position: relative;
+    top: -0.3rem;
   }
 }

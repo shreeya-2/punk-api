@@ -1,7 +1,8 @@
 import React from "react";
 import "./Searchbar.scss";
 
-const Searchbar = () => {
+const Searchbar = (props) => {
+  const { searchInput, handleSearch } = props;
   return (
     <div className="searchbar">
       <img
@@ -9,7 +10,14 @@ const Searchbar = () => {
         src="https://api.iconify.design/fe/search.svg"
         alt="search icon"
       />
-      <input className="searchbar__input" />
+      <input
+        className="searchbar__input"
+        type="text"
+        value={searchInput}
+        onInput={handleSearch}
+        label="Search"
+        placeholder="Search"
+      />
     </div>
   );
 };

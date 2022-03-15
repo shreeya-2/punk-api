@@ -1,30 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.scss";
 import Nav from "./components/Nav/Nav";
-import beers from "./data/beers";
-import ProductCard from "./components/ProductCard/ProductCard";
 import CardContainer from "./components/CardContainer/CardContainer";
 import banner from "./assets/images/banner_1.png";
 
 const App = () => {
-  const createProductCard = beers.map((beer) => {
-    return (
-      //console.log({beer.name})
+  const url = "https://api.punkapi.com/v2/beers";
 
-      <ProductCard
-        //image={beer.image_url}
-        name={beer.name}
-        tagline={beer.tagline}
-        label={beer.abv}
-      />
-    );
-  });
+  const [products, setProducts] = useState([]);
+
+  const getProducts = async () => {
+    const res = await fetch(url);
+    const data = await res.json();
+
+    setProducts(data);
+  };
+
+  useEffect(() => {
+    getProducts();
+  }, []);
 
   return (
     <div className="app">
       <Nav />
-      <img className="app__banner" src={banner} alt="banner image" />
-      {/* <section className="app__content"> {createProductCard} </section> */}
+      <img className="app__banner" src={banner} alt="banner" />
+      <CardContainer cards={products} />
     </div>
   );
 };
