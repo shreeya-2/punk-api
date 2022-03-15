@@ -6,7 +6,7 @@ const Searchbar = () => {
     <div className="searchbar">
       <img
         className="searchbar__icon"
-        src="https://api.iconify.design/fe/search.svg?color=whitesmoke"
+        src="https://api.iconify.design/fe/search.svg"
         alt="search icon"
       />
       <input className="searchbar__input" />
