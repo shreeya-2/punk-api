@@ -1,19 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import ProductCard from "../ProductCard/ProductCard";
 import "./CardContainer.scss";
 
 const CardContainer = ({ cards }) => {
-  console.log({ cards });
+  const [showCardInfo, setShowCardInfo] = useState(false);
+
+  const toggleCard = () => {
+    setShowCardInfo(!showCardInfo);
+  };
+
   return (
     <div className="card-container">
       {cards.map((product) => {
-        // console.log({product.name})
         return (
+          // {showCardInfo &&
           <ProductCard
             image={product.image_url}
             name={product.name}
             tagline={product.tagline}
             label={product.abv}
+            toggleCard={toggleCard}
           />
         );
       })}
