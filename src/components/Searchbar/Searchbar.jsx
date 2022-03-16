@@ -12,9 +12,8 @@ const Searchbar = (props) => {
       />
       <input
         className="searchbar__input"
-        type="text"
         value={searchInput}
-        onInput={handleSearch}
+        onChange={handleSearch}
         label="Search"
         placeholder="Search"
       />
@@ -23,3 +22,12 @@ const Searchbar = (props) => {
 };
 
 export default Searchbar;
+
+//pseudocode:
+//1. convert search input into lower case
+//2. convert beer array name/data into lower case
+//3. see if cleaned data includes cleaned search input
+//4. if included, get corresponding object id (or array index, slice -1)
+//(if not included return alert message of "not found")
+//5. then change url to apend id
+//6. use effects to re-render on url change + return relevant product card(s)

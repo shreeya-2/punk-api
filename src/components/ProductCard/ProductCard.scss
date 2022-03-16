@@ -14,13 +14,17 @@
   border-radius: 6px;
   border: solid 0.1rem #dedede;
   @media screen and (max-width: 750px) {
-    max-width: 9rem;
+    max-width: 9.8rem;
     max-height: 18rem;
     margin: 0.5rem;
   }
 
   &:hover {
     border: solid 0.1rem $accent-color;
+  }
+
+  &:after {
+    background-color: $accent-color;
   }
 
   &__image {
@@ -58,5 +62,24 @@
     padding: 0.5rem;
     border-radius: 33px;
     text-align: center;
+  }
+}
+
+.card-info {
+  &__heading {
+    font-family: $primary-font;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    @media screen and (max-width: 750px) {
+      font-size: 1.5rem;
+    }
+  }  
+
+  &__content {
+    font-family: $secondary-font;
+    font-size: 0.7rem;
+    text-align:center;
   }
 }

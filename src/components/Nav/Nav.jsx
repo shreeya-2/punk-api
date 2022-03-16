@@ -2,22 +2,8 @@ import React, { useState } from "react";
 import "./Nav.scss";
 import FilterMenu from "../FilterMenu/FilterMenu";
 import Searchbar from "../Searchbar/Searchbar";
-//import beers from "./data/beers";
-const Nav = () => {
-  const [searchInput, setSearchInput] = useState("");
 
-  const handleSearch = (event) => {
-    const cleanedInput = event.target.value.toLowerCase();
-    searchInput(cleanedInput);
-  };
-
-  // const beers.forEach((beer) => {
-  //   const cleanBeerName = beer.name.toLowerCase();
-  //   return cleanBeerName.includes(searchInput);
-  // });
-
-  //&&ProductCard?
-
+const Nav = ({ searchInput, handleSearch }) => {
   return (
     <div className="nav">
       <FilterMenu />
