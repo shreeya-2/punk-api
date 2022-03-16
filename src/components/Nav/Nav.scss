@@ -24,4 +24,14 @@
     position: relative;
     margin-left: 8rem;
   }
+
+  @media screen and (max-width: 750px) {
+    .nav {
+      justify-content: space-between;
+    }
+
+    &__header {
+      margin: 0;
+    }
+  }
 }

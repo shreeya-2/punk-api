@@ -13,6 +13,11 @@
   align-items: center;
   border-radius: 6px;
   border: solid 0.1rem #dedede;
+  @media screen and (max-width: 750px) {
+    max-width: 9rem;
+    max-height: 18rem;
+    margin: 0.5rem;
+  }
 
   &:hover {
     border: solid 0.1rem $accent-color;
@@ -21,6 +26,9 @@
   &__image {
     height: 50%;
     padding: 0.6rem;
+    @media screen and (max-width: 750px) {
+      max-height: 40%;
+    }
   }
 
   &__heading {
@@ -28,6 +36,9 @@
     font-size: 1.8rem;
     text-transform: uppercase;
     text-align: center;
+    @media screen and (max-width: 750px) {
+      font-size: 1.5rem;
+    }
   }
 
   &__subheading {
@@ -35,6 +46,9 @@
     font-size: 1.1rem;
     text-align: center;
     padding-bottom: 0.7rem;
+    @media screen and (max-width: 750px) {
+      font-size: 0.9rem;
+    }
   }
 
   &__label {
