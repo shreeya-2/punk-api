@@ -3,6 +3,7 @@ import ProductCard from "../ProductCard/ProductCard";
 import "./CardContainer.scss";
 
 const CardContainer = ({ cards }) => {
+
   return (
     <div className="card-container">
       {cards.map((product) => {
@@ -21,3 +22,10 @@ const CardContainer = ({ cards }) => {
 };
 
 export default CardContainer;
+
+
+// if ({product.image_url} === null) {
+//   productImage=("image not available")
+// } else {
+//   productImage={product.image_url}
+// }

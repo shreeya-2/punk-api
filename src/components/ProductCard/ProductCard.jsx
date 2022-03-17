@@ -5,11 +5,20 @@ import "./ProductCard.scss";
 const ProductCard = (props) => {
   const { image, name, tagline, description, label} = props;
 
+  // const [showProductImage, setShowProductImage] = useState ();
   const [showCardInfo, setShowCardInfo] = useState(false);
 
   const toggleCard = () => {
     setShowCardInfo(!showCardInfo);
   };
+
+  // const handleImage = () => {
+  //   if ({image} === null) {
+  //     setShowProductImage("image not available")
+  //   } else {
+  //     setShowProductImage({image}) 
+  //   }
+  // }
 
   const CardInfoJSX = (
     <div className="card-info"> 

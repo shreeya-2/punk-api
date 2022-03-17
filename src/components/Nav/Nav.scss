@@ -3,14 +3,19 @@
 
 .nav {
   width: 100%;
-  min-width: 350px;
+  min-width: 360px;
   height: 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   z-index: 1;
   background-color: $background-color;
+
+  &__filter-icon {
+    height: 2.5rem;
+    margin-left: 1rem;
+  }  
 
   &__header {
     display: flex;

@@ -5,7 +5,9 @@
 
 .app {
   &__banner {
+    position: relative;
+    top: 112px;
     width: 100%;
-    min-width: 350px;
+    min-width: 360px;
   }
 }
