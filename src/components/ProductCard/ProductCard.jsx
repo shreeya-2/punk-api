@@ -15,21 +15,22 @@ const ProductCard = (props) => {
     <div className="card-info"> 
       <h2 className="card-info__heading"> {name} </h2>
       <p className="card-info__content"> {description} </p> 
+      {/* <button className="card-info__button"> close description </button> */}
     </div>
   );
 
   const ProductCardJSX = (
-    <div className="product-card"  onClick={toggleCard}>
+    <>
         <img className="product-card__image" src={image} alt={name} />
         <h2 className="product-card__heading"> {name}</h2>
         <h3 className="product-card__subheading">{tagline}</h3>
         <p className="product-card__label">{`ABV ${label} %`}</p>
-    </div>
+        <button className="product-card__button"> see more </button>
+    </>
   )
 
   return (
-    
-    <div className="product-card"  onClick={toggleCard}>
+    <div className="product-card" onClick={toggleCard}> 
      {showCardInfo ? CardInfoJSX : ProductCardJSX} 
     </div>
   );
